@@ -1,2 +1,1 @@
-# RPSLS
-RPSLS lab C#
+# RPSLS_FSF_CSharp_Starter
