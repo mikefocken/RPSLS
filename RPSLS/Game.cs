@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.Design;
 using System.Linq;
 using System.Net.Security;
 using System.Reflection.Metadata;
@@ -68,24 +69,39 @@ namespace RPSLS
 
         public void CompareGestures()
         {
-            playerOne= playerOne.gestures();
-            playerTwo= playerTwo.chosenGesture();
 
-            if (playerOne = rock and playerTwo = paper); 
+            playerOne.ChooseGesture();
+            playerTwo.ChooseGesture();
+
+            if (playerOne.chosenGesture == playerTwo.chosenGesture)
             {
-                Console.WriteLine("Player Two wins");
-
+                Console.WriteLine("Tie, No winner");
+                return;
             }
+
+            else if (
+                (playerOne.chosenGesture == "Rock" && playerTwo.chosenGesture == Gesture.Scissor) ||
+                (playerOne.chosenGesture == Gesture.Scissor && playerTwo.chosenGesture=Gesture.Paper)||
+                (playerOne.chosenGesture == Gesture.Paper && playerTwo.chosenGesture ==Gesture.=Rock)||
+                (playerOne.chosenGesture == Gesture.Rock && playerTwo.chosenGesture==Gesture.Lizard)||
+                (playerOne.chosenGesture == Gesture.Lizard && playerTwo.chosenGesture==Gesture.Spock)||
+                (playerOne.chosenGesture == Gesture.Spock && playerTwo.chosenGesture==Gesture.Scissor)||
+                (playerOne.chosenGesture == Gesture.Lizard && playerTwo.chosenGesture==Gesture.Paper)||
+                (playerOne.chosenGesture == Gesture.Paper && playerTwo.chosenGesture==Gesture.Gesture.Spock)||
+                (playerOne.chosenGesture == Gesture.Spock && playerTwo.chosenGesture==Gesture.Rock)
+
+                )
+             {
+                Console.WriteLine("Player Two wins");
+                playerTwo score++
+             }
+                
             else
             {
-                Console.WriteLine("What is Player One's name?");
-                playerTwo = new HumanPlayer(Console.ReadLine());
-                playerTwo score = ++1;
+                Console.WriteLine("Player one wins");
+                playeOne score++;
 
-            }
-
-
-
+            }    
         }
 
         public void DisplayGameWinner()
