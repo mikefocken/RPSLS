@@ -40,7 +40,7 @@ namespace RPSLS
             this.pickGesture=chosenGesture;
         }
 
-        public void pickGesture()gi
+        public void pickGesture()
 
         {
 
