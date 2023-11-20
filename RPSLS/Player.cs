@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace RPSLS
 {
-    internal abstract class Player
+    public abstract class Player
     {
         //Member Variabes (HAS A)
         public string name;
@@ -25,37 +25,8 @@ namespace RPSLS
         }
         //Member Methods (CAN DO)
         //This abstract method must be overridden by the child Player 
-             
-                  
+        public abstract void ChooseGesture();       
+               
     }
-
-    internal class HumanPlayer : Player
-    {
-       
-        public HumanPlayer (string playerone, string playertwo, string chosenGesture)
-
-        {
-            this.name=name;
-            this.gestures= new List<string>();
-            this.pickGesture=chosenGesture;
-        }
-
-        public void pickGesture()
-
-        {
-
-            Console.WriteLine($"Please choose a gesture{List}.");
-
-        }
-
-
-
-
-
-
-
-
-
-
-    }
+   
 }

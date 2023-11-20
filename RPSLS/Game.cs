@@ -25,10 +25,7 @@ namespace RPSLS
                 Console.WriteLine("rock smashes scissors,scissors cuts paper, paper covers rock,Rock smashes lizard,lizard poisons spock, spock smashes scissors, scissors decapitates lizard,Lizard eats paper");
                 Console.WriteLine("The game will play until one player wins the best of three games!");
                 Console.WriteLine(" if you don't have a friend to play the game with, you can play against the computer");
-                Console.WriteLine($" please choose between 1 and 2 players");
-                string response = Console.ReadLine();
-                int convertReturn = int.Parse(response);
-                Console.ReadLine();
+                
             }
 
             //Member Methods (CAN DO)
@@ -44,23 +41,51 @@ namespace RPSLS
             
         }
 
-        public int ChooseNumberOfHumanPlayers(int playerone, int playertwo)
+        public int ChooseNumberOfHumanPlayers()
                 
         {
-
-
-            return 0;
+            Console.WriteLine($" please choose between 1 and 2 players");
+            string response = Console.ReadLine();
+            int convertReturn = int.Parse(response);
+           
+            return convertReturn;
         }
 
-        public void CreatePlayerObjects(int numberOfHumanPlayers)
-       
+        public void CreatePlayerObjects(int numberOfHumanPlayers) 
+
         {
-            //if (numberOfHumanPlayers > 0) { }
+            Console.WriteLine("What is Player One's name?");
+            playerOne = new HumanPlayer(Console.ReadLine());
+
+            if (numberOfHumanPlayers == 1) 
+            {
+                playerTwo= new ComputerPlayer();
+            }
+            
+
+
         }
 
         public void CompareGestures()
         {
-            
+            playerOne= playerOne.gestures();
+            playerTwo= playerTwo.chosenGesture();
+
+            if (playerOne = rock and playerTwo = paper); 
+            {
+                Console.WriteLine("Player Two wins");
+
+            }
+            else
+            {
+                Console.WriteLine("What is Player One's name?");
+                playerTwo = new HumanPlayer(Console.ReadLine());
+                playerTwo score = ++1;
+
+            }
+
+
+
         }
 
         public void DisplayGameWinner()
@@ -71,6 +96,8 @@ namespace RPSLS
         public void RunGame()
         {
             WelcomeMessage();
+            int numPlayers = ChooseNumberOfHumanPlayers();
+            CreatePlayerObjects(numPlayers);
         }
     }
 }
