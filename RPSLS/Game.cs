@@ -71,6 +71,7 @@ namespace RPSLS
         {
             playerOne.ChooseGesture();
             playerTwo.ChooseGesture();
+            ;
 
             Console.WriteLine($"Player One Chose: {playerOne.chosenGesture}");
             Console.WriteLine($"Player Two Chose: {playerTwo.chosenGesture}");
@@ -81,11 +82,11 @@ namespace RPSLS
                 return;
             }
             else if (
-                (playerOne.chosenGesture == "Rock" && (playerTwo.chosenGesture == "Scissor" || playerTwo.chosenGesture == "Lizard")) ||
-                (playerOne.chosenGesture == "Scissor" && (playerTwo.chosenGesture == "Paper" || playerTwo.chosenGesture == "Lizard")) ||
+                (playerOne.chosenGesture == "Rock" && (playerTwo.chosenGesture == "Scissors" || playerTwo.chosenGesture == "Lizard")) ||
+                (playerOne.chosenGesture == "Scissors" && (playerTwo.chosenGesture == "Paper" || playerTwo.chosenGesture == "Lizard")) ||
                 (playerOne.chosenGesture == "Paper" && (playerTwo.chosenGesture == "Rock" || playerTwo.chosenGesture == "Spock")) ||
                 (playerOne.chosenGesture == "Lizard" && (playerTwo.chosenGesture == "Spock" || playerTwo.chosenGesture == "Paper")) ||
-                (playerOne.chosenGesture == "Spock" && (playerTwo.chosenGesture == "Scissor" || playerTwo.chosenGesture == "Rock"))
+                (playerOne.chosenGesture == "Spock" && (playerTwo.chosenGesture == "Scissors" || playerTwo.chosenGesture == "Rock"))
             )
             {
                 Console.WriteLine("Player One wins");
